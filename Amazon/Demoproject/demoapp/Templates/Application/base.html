@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'Application/css/style.css' %}" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <title>{% block title %}Amazon{% endblock %}</title>
+  </head>
+  <body>
+    <header>
+      <div class="header">
+        <img src="{% static 'Application/Images/amazon-logo.jpg' %}"alt="Logo" height="50"/>
+        <div>
+          <img src="{% static 'Application/Images/gps.png' %}"alt="Location"height="20"/>
+          <a href="">Update Location</a>
+        </div>
+        <div class="nav-search">
+          <input type="text" placeholder="Search Amazon.in" />
+          <button>
+            <img src="{% static 'Application/Images/search.png' %}"alt="Search Icon"height="20"/>
+          </button>
+        </div>
+        <select name="country" class="country-select">
+          <option value="in">🇮🇳 IN</option>
+          <option value="us">🇺🇸 US</option>
+          <option value="uk">🇬🇧 UK</option>
+          <option value="ca">🇨🇦 CA</option>
+        </select>
+
+            
+<div class="dropdown">
+  <button class="dropbtn">Sign in<br><strong>Account & Lists</strong></button>
+</div>
+
+        <a href="">Return & Order</a>
+        <img src="{% static 'Application/Images/addtocart.jpg' %}"alt="Add to cart"height="50"/>
+      </div>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/contact">Contact</a>
+        <a href="/product">Product</a>
+      </nav>
+    </header>
+    <main>
+      {% block content %}
+      <p>Welcome to my Amazon website!</p>
+      {% endblock %}
+    </main>
+    <footer>
+      <p>&copy; 2025 Amazon Website.</p>
+    </footer>
+  </body>
+</html>

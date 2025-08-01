@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} My application {% endblock %}</title>
+</head>
+<body>
+    <header>
+        <h1>My website header</h1>
+    </header>
+    <nav>
+        <a href="/">Home</a>
+        <a href="/about">About</a>
+    </nav>
+    <main>
+        {% block content %}
+        <p>Welcome to my website!</p>
+        {% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 MySite</p>
+    </footer>
+</body>
+</html>
