@@ -1,11 +1,29 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Product</title>
+    <link rel="stylesheet" href="{% static 'products/css/style.css' %}" />
 </head>
 <body>
-    
+    <h2>Add Product</h2>
+  <form method="post">
+    {% csrf_token %}
+    Name: <input type="text" name="name" required><br>
+    Price: <input type="number" name="price" step="0.01" required><br>
+    Description: <textarea name="description" required></textarea><br>
+    Stock: <input type="number" name="stock" required><br>
+    <input type="submit" value="Add Product">
+  </form>
+  <a href="{% url 'product_list' %}"  class="btn btn-back">Back to Product List</a>
+  {% if messages %}
+    <ul>
+      {% for message in messages %}
+        <li>{{ message }}</li>
+      {% endfor %}
+    </ul>
+  {% endif %}
 </body>
 </html>

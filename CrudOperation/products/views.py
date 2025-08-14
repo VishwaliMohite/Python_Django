@@ -30,7 +30,7 @@ def edit_product(request,id):
             stock = request.POST['stock'],
         )
         return redirect('product_list')
-    return render(request,'products/edit_product.html')
+    return render(request,'products/edit_product.html',{'products':product})
 
 # Delete a product
 def delete_product(request,id):
@@ -38,3 +38,4 @@ def delete_product(request,id):
     if request.method=='POST':
         product.delete()
         return redirect('product_list') 
+    return render(request,'products/delete_product.html',{'products':product})

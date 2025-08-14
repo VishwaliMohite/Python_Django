@@ -1,7 +1,7 @@
 from django.urls import path
 from . import views
 
-urlPatterns = [
+urlpatterns = [
     path('',views.product_list, name='product_list'),     #List all product
     path('add/',views.add_product,name='add_product'),    # add new product
     path('edit/<int:id>',views.edit_product,name='edit_product'),   #Edit an existing product
