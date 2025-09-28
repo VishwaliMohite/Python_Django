@@ -98,7 +98,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'vishwalimohite@gmail.com'
-EMAIL_HOST_PASSWORD = 'tmrszzhynpyqfldwaq'
+EMAIL_HOST_PASSWORD = 'tmrs zzhy npyq fldw'
 
 
 # Password validation
